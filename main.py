@@ -37,7 +37,12 @@
 #     return {"item_id": item_id, "q": q, "p": p}
 
 
+"""
+启动操作 : d:\Python37\python.exe -m uvicorn main:app --host 127.0.0.1 --port 30080 --reload
 
+docs     :   http://127.0.0.1:30080/docs
+redoc    :   http://127.0.0.1:30080/redoc    
+"""
 
 from fastapi import FastAPI
 from pydantic import BaseModel

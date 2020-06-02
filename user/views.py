@@ -1,17 +1,17 @@
 from routers import router
 from . import models
 
-@router.get("/users/", tags=["users"])
+@router.post("/users/", tags=["users"])
 async def users(user: models.User):
     """
     {
         "id": 1,
-        "mail": "test@gmail.com",
+        "mail": "example@gmail.com",
         "age": 20,
-        "name": "oneplus"
+        "name": "example"
     }	
     """
-    return [{"username": user.name}, {"age": user.age}, {"mail": "test@gamil.com"}]
+    return {"username": user.name, "age": user.age, "mail": user.mail}
  
 @router.get("/users/me", tags=["users"])
 async def read_user_me():
